@@ -1,0 +1,10 @@
+
+//WAP to find the heaviest weight among three persons
+#include <stdio.h>
+int main()
+	{
+		float w1,w2,w3;   //declaring 3 persons_weights as floating variables
+		scanf("%f %f %f",&w1,&w2,&w3);  //input the weights of the 3 persons
+		((w1>w2)&&(w1>w3))?printf("Weight of Person-1 is heaviest that Person2 & Person3"):((w2>w1)&&(w2>w3))?printf("Weight of Person2 is heaviest than Person1 & Person3"):printf("Weight of Person3 is heaviest than Person1 & person2");    // compare weights of 3 persons using ternary operator.
+		
+	}

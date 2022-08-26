@@ -1,0 +1,18 @@
+//WAP to find area of circular graden to be gardened by the gardener, input the radius of circular garden and print the area of circular garden.
+
+#include <stdio.h>
+#define PI 3.14
+int main()
+{
+    int rad;   								// decalre rad-integer variable
+    float area_gar;
+    printf("enter radius of circular garden"); 				//display to printf
+    scanf("%d",&rad);       						// inputing the radius of circular garden.
+    area_gar=PI*(rad*rad);    						// formula for evaluating the area of circular garden
+    printf("Area of Circular Garden=%f",area_gar); 			//displays the area of circular garden.
+}
+
+
+
+
+

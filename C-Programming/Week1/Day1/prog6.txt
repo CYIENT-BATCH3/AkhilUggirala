@@ -1,0 +1,27 @@
+// WAP to take a six digit number as user input and revesre the 
+#include <stdio.h>
+
+int main() {
+    int num,temp,rev=0,rem; //declare variables and intialize rev=0
+    scanf("%d",&num);       //input a six digit number
+    temp=num;               //store the num into a temp variable
+    rem=temp%10;            //finds the reminder to get the last digit of num
+    rev=rev*10+rem;         //store the digit found in last into rev variable using this formula
+    temp=temp/10;           //remove the digit stored into rev in above step using this step.
+    rem=temp%10;            
+    rev=rev*10+rem;
+    temp=temp/10;
+    rem=temp%10;
+    rev=rev*10+rem;
+    temp=temp/10;
+    rem=temp%10;
+    rev=rev*10+rem;
+    temp=temp/10;
+    rem=temp%10;
+    rev=rev*10+rem;
+    temp=temp/10;
+    rem=temp%10;
+    rev=rev*10+rem;
+    //temp=temp/10;
+    printf("Actual:%d Reverse:%d",num,rev);     //print the actual numbers and its reverse
+}
