@@ -1,0 +1,16 @@
+//WAP to number 5 balls and find whether the ball is numbered even or odd
+#include<stdio.h>
+int main()
+{
+    int ball1,ball2,ball3,ball4,ball5;  						                                               //declare 5 balls as integer varible
+    scanf("%d %d %d %d %d",&ball1,&ball2,&ball3,&ball4,&ball5);                                    //input the number for each and evrery ball
+    printf("Ball-1=%d Ball-2%d Ball-3=%d Ball-4=%d Ball-5=%d\n",ball1,ball2,ball3,ball4,ball5);    //display the numbers assigned to the balls in the previous step
+    (ball1%2==0)?printf("Ball-1 is numbered even\n"):printf("Ball-1 is numbered odd\n");           //checks whether the ball is numbered even or odd using conditional operator
+    (ball2%2==0)?printf("Ball-2 is numbered even\n"):printf("Ball-2 is numbered odd\n");
+    (ball3%2==0)?printf("Ball-3 is numbered even\n"):printf("Ball-3 is numbered odd\n");
+    (ball4%2==0)?printf("Ball-4 is numbered even\n"):printf("Ball-4 is numbered odd\n");
+    (ball5%2==0)?printf("Ball-5 is numbered even\n"):printf("Ball-5 is numbered odd\n");
+    }
+
+
+
