@@ -1,0 +1,45 @@
+//wap to check whether the door is open or not for different doors in a car
+//using conditional operator
+#include <stdio.h>			//include std I/O header file using preprocessor directive 
+int main()
+{
+    int dr_door=0xA5,psngr_door=0x55,t_door=0xAA;			//declare and intialize the variables of pariticular doors
+    (dr_door&(1<<6))?printf("Drvr_Door1 is open\n"):printf("Drvr_Door1 is closed\n");		//check whether the door is open or not using masking concept: num&(1<<bit spot)
+    (dr_door&(1<<7))?printf("Drvr_Door2 is open\n"):printf("Drvr_Door2 is closed\n");
+    (psngr_door&(1<<3))?printf("Passenger_Door1 is open\n"):printf("Passenger_Door1 is closed\n");
+    (psngr_door&(1<<4))?printf("Passenger_Door2 is open\n"):printf("Passenger_Door2 is closed\n");
+    (t_door&(1<<0))?printf("Tail_Door is open\n"):printf("Tail_Door is closed\n");
+}
+
+// using ifelse control statement
+#include <stdio.h>
+int main()
+{
+    int dr_door=0xA5,psngr_door=0x55,t_door=0xAA;		//declare and intialize the variables of pariticular doors
+    if(dr_door&(1<<6))				//check whether the door is open or not using if condition with masking concept: num&(1<<bit spot)
+    printf("Drvr_Door1 is open\n");
+    else
+    printf("Drvr_Door1 is closed\n");		//else print the door status as closed.
+    if(dr_door&(1<<7))
+    printf("Drvr_Door2 is open\n");
+    else
+    printf("Drvr_Door2 is closed\n");
+    if(psngr_door&(1<<3))
+    printf("Passenger_Door1 is open\n");
+    else
+    printf("Passenger_Door1 is closed\n");
+    if(psngr_door&(1<<4))
+    printf("Passenger_Door2 is open\n");
+    else
+    printf("Passenger_Door2 is closed\n");
+    if(t_door&(1<<0))
+    printf("Tail_Door is open\n");
+    printf("Tail_Door is closed\n");
+}
+
+output:
+Drvr_Door1 is closed
+Drvr_Door2 is open
+Passenger_Door1 is closed
+Passenger_Door2 is open
+Tail_Door is closed

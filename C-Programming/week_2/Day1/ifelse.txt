@@ -1,0 +1,14 @@
+//wap to check whether given integer is even or odd
+#include <stdio.h> 	//include the header file using preprocessor directive
+
+int main()
+{
+    int a;		// declare integer variable a
+    scanf("%d",&a);	//input the integer variable using scanf
+    if(a%2==0)		//check if it is even or not using if condition
+    printf("Even");
+    else 
+    printf("Odd");	//else it is odd
+
+    return 0;
+}

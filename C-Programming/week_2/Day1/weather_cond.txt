@@ -1,0 +1,22 @@
+//wap to check current weather condition using elseif ladder 
+#include <stdio.h>		//include the std i/o header file using preprocessor directive
+
+int main()
+{
+    int temp;			//declare the temperature as ineteger variable
+    scanf("%d",&temp);		//input the current temperature
+    if(temp>=40)
+    printf("Very Hot");
+    else if(temp>=30&&temp<=39)
+    printf("Hot");
+    else if(temp>=20&&temp<=29)
+    printf("Normal in Temp");
+    else if(temp>=10&&temp<=19)
+    printf("Cold Weather");
+    else if(temp>=0&&temp<=9)
+    printf("Very Cold Weather");
+    else if(temp<0)
+    printf("Freezing Weather");
+
+    return 0;
+}

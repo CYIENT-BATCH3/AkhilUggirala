@@ -1,0 +1,19 @@
+//wap to grade a student with his marks scored using elseif ladder
+ #include <stdio.h>		//include the header file using preprocessor directive
+
+int main()
+{
+    int marks;			//declare the marks as a integer variable
+    scanf("%d",&marks);		//input the marks using scanf
+    if(marks>=70&&marks<=100)	//check the grade for the marks secured by a student using elseif ladder
+    printf("Distinction");
+    else if(marks>=60&&marks<70)
+    printf("First Class");
+    else if(marks>=50&&marks<60)
+    printf("second Class");
+    else if(marks>=35&&marks<50)
+    printf("Pass");
+    else
+    printf("Fail");
+    
+}

@@ -1,0 +1,28 @@
+//calculator using switch case for float variables
+#include<stdio.h>		//include the header file using preprocessor directive
+int main()
+{
+    float a,b;			//declare 2 float variables
+    char choice;		//declare the expression constant as choice char variable
+    scanf("%f %f",&a,&b);	//input the float variables a and b
+    printf("enter the operation\n");	//enter the operation to be performed
+    scanf(" %c",&choice);		//input choice for particular operation to be performed
+    switch(choice)    
+    {
+    case '+':
+    printf("%f+%f=%f",a,b,a+b);		//addition 
+    break;
+    case '-':
+    printf("%f-%f=%f",a,b,a-b);		//subtraction
+    break;
+    case '*':
+    printf("%f*%f=%f",a,b,a*b);		//multiplication
+    break;
+    case '/':
+    printf("%f/%f=%f",a,b,a/b);		//division-Coefficient
+    break;
+    default:
+    printf("Invalid Input");		//invalid input
+    }    
+    
+}
