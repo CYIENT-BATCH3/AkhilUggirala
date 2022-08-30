@@ -1,0 +1,15 @@
+//wap to print even numbers 100 to n even numbers in reverse order
+#include<stdio.h>			//includes std I/O header file using preprocessor
+int main()
+{
+    int a=100,n;			//declare the a=100, and n for intial value
+    scanf("%d",&n);			//input intial value n
+    while(n<=a)				//execute the loop until the condition fails
+    {
+        if(a%2==0)			//check whether the number is even or not 
+        {
+        printf("%d ",a);		//if it is even prints the number
+        }
+        a--;				//decrement a to check all the numbers upto n
+    }
+}

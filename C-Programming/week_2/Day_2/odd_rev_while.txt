@@ -1,0 +1,15 @@
+//wap to print odd numbers 100 to n odd numbers in reverse order
+#include<stdio.h>		//includes std I/O header file using preprocessor
+int main()
+{
+    int a=100,n;			//declare a,n
+    scanf("%d",&n);			//input the number
+    while(n<=a)				//execute loop until a reaches the given min value
+    {
+        if(a%2!=0)			//check odd condition, print number if condition is satisfied
+        {
+        printf("%d ",a);
+        }
+        a--;				//decrement to reach the min value n
+    }
+}

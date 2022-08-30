@@ -1,0 +1,16 @@
+//wap to print even numbers 1 to n odd numbers
+#include<stdio.h>			//includes std I/O header file using preprocessor
+int main()
+{
+    int a=1,n;				//declare a,n
+    puts("Enter Max Value n");
+    scanf("%d",&n);			//input the number n
+    while(a<=n)
+    {
+        if(a%2!=0)			//check the odd condition and print the value if satisfied
+        {
+        printf("%d ",a);
+        }
+        a++;				//increment to reach the max value n
+    }
+}
