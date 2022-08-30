@@ -1,0 +1,24 @@
+//wap to print prime numbers between a range
+#include<stdio.h>			//includes std I/O header file using preprocessor
+int main()
+{
+    int n1,n2,i,cnt;			//declare n1,n2i,cnt
+    puts("nter the Min-n1 Max-n2");
+    scanf("%d %d",&n1,&n2);		//input max and min values
+    while(n1<=n2)			//execute the loop until the n1 reaches the n2
+    {
+        cnt=0;				//intialize cnt=0 for every n1
+        i=1;
+        while(i<=n1)			//intialize i=1for every n1
+        {
+            if(n1%i==0)			//check the condition n1%10
+            {
+            cnt++;			//if above condition is true increment cnt
+            }
+            i++;			//increment i until i equals n
+        }
+        if(cnt==2)			//if cnt=2 it is prime
+        printf("%d ",n1);		//print prime number
+        n1++;				//increment the n1 until it reaches the n2-max value of the range
+    }
+}
