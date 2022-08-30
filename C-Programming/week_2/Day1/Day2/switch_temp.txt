@@ -1,0 +1,30 @@
+// WAP to check weather usig switch cases
+#include <stdio.h>
+
+int main() {
+    //int temp;
+    char choice;
+    printf("Select Category according to temp input\n");
+    printf("if temp>40 - A   30-40 - B  20-30 - C    10-20 - D   0-10 - E\n");
+    scanf("%c",&choice);
+    switch (choice)
+    {
+        case 'A':
+        printf("Weather is Very Hot");
+        break;
+        case 'B':
+        printf("Weather is  Hot");
+        break;
+        case 'C':
+        printf("Weather is Normal");
+        break;
+        case 'D':
+        printf("Weather is Cool");
+        break;
+        case 'E':
+        printf("Weather is Very Cool");
+        break;
+        default :
+        printf("Freezing Weather\n");
+    }
+}

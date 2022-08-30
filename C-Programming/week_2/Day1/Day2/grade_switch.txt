@@ -1,0 +1,26 @@
+// WAP to Grade a student using switch case
+#include <stdio.h>              //includes std I/O header file using preprocessor
+
+int main() {
+    char choice;
+    printf("Select Choice for Marks obtained by a student\n");
+    printf("if Marks<40 - F(Fail)   40-50 - P(Pass)  50-60 - B(B-Grade)    60-70 - A(A-Grade)     70-100 - D(Distinction)\n");
+    scanf("%c",&choice);
+    switch (choice)
+    {
+        case 'D':
+        printf("Distinction");
+        break;
+        case 'A':
+        printf("A-Grade");
+        break;
+        case 'B':
+        printf("B-Grade");
+        break;
+        case 'P':
+        printf("Pass");
+        break;
+        default :
+        printf("Fail");
+    }
+}

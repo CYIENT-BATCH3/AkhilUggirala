@@ -1,0 +1,12 @@
+//wap to use break 
+#include<stdio.h>		//includes std I/O header file using preprocessor
+int main()
+{
+    int i,n=10;			//declare i and n
+    for(i=1;i<=n;i++)		//execute the loop for 1<i<10 condition
+    {
+        if(i==4)		//if i=4 break the statement
+        break;			//exit the loop
+        printf("%d ",i);	//prints i value
+    }
+}

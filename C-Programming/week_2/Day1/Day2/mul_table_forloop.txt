@@ -1,0 +1,10 @@
+//wap to print  multiplication table using for loop
+#include<stdio.h>			//includes std I/O header file using preprocessor
+int main()
+{
+    int a=1,n,m;                //declare variables for a,n-number,m-multiples you want to print
+    puts("Enter Num for Table and No of multiples you want");   //print a satement to enter table number you want to print and its no.of multiples
+    scanf("%d %d",&n,&m);       //input table and no.of multiples values
+    for(a=1;a<=m;a++)           //write a for condition to check the range of multiples  from 1 to it's given value to execute below statement
+        printf("%d*%d=%d\n",n,a,n*a);       //prints the table in 2*1=2
+}
