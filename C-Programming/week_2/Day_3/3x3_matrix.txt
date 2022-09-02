@@ -1,0 +1,15 @@
+//WAP to input 3x3 array statically and print all the elements in matrix format 
+
+#include <stdio.h>			//include standard input and output header file using preprocessor directive
+int main()
+{
+    int a[3][3]={{1,2},{3,4},{5,6}},i,j;		//declare & define the 3x3 matrix, also declare i,j for indexing purpose.
+    for(i=0;i<3;i++)					//define for-loop parameters for referencing 1D-arrays
+    {
+    for(j=0;j<3;j++)					//define for-loop parameters for referencing elements of above 1D-arrays.
+    {
+    printf("%d ",a[i][j]);				//print the elements of an array
+    }
+    printf("\n");					//this statement to go next line after printing every 1D-Array 
+    }
+}

@@ -1,0 +1,22 @@
+//WAP to read and print the elements of 2D-Array
+#include<stdio.h>			//include standard input and output header file using preprocessor directive
+int main()				//start main function
+{
+    int a[10][10],i,j,m,n;			//declare a 2D-Array, also i,j for referencing elements of it.
+    puts("Enter no of rows-m and no of columns-n");	//prints statemet for entering values of no.of rows and columns
+    scanf("%d %d",&m,&n);				//inputs the values for no.of rows and columns
+     for(i=0;i<m;i++)			                //define for loop to start executing from index-0 to it's max index
+    {
+        for(j=0;j<n;j++)				//define for loop to start executing from index-0 to it's max index
+        scanf("%d",&a[i][j]);				//assigns values to 2D-Array
+    }
+    for(i=0;i<m;i++)					//define for loop to start executing from index-0 to it's max index
+    {
+        for(j=0;j<n;j++)				//define for loop to start executing from index-0 to it's max index
+        {
+        printf("%d ",a[i][j]);				//prints the values of 2D-Array
+        }
+	printf("\n");					//goes to next line after completion of printing each 1D-Array 
+    }
+    
+}
