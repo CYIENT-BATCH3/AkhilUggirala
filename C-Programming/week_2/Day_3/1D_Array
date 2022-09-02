@@ -1,0 +1,15 @@
+//WAP to read and print the elements of an 1D Array
+#include<stdio.h>
+int main()
+{
+    int a[20],i;            //declare an array of size 20, and i
+    printf("Enter the Elements\n");     //Print a statement to enter elements
+    for(i=0;i<10;i++)     //using for loop intialize the value into an array in run time
+    {
+    printf("Enter a[%d]:",i);       //print a statement to indicate to enter element of particular index
+    scanf("%d",&a[i]);
+    }
+    printf("Elements of the Array are below:\n");
+    for(i=0;i<10;i++)                   //print the elements of an array
+    printf("a[%d]=%d\n",i,a[i]);
+}
