@@ -1,0 +1,19 @@
+//WAP to find the factorial of number using function(recursion)
+#include<stdio.h>           //include standard input and output header file using preprocessor directive
+int fact(int);              //declare fact function with int return type and int arguments
+int main()                  //start main function
+{
+    int fac,n;              //declare a integer type variable and temporary variable-'fac' to store the return value of fact().
+    puts("Enter non zero number");   //statement to enter the number
+    scanf("%d",&n);			//input integer variable-n
+    fac=fact(n);            //call a fact() and assign its return to variable-'fac'
+    printf("Factorial of %d is %d",n,fac); //print the Factorial of the number-n
+}
+int fact(int x)         //definition of fact() by getting argument from main()
+{
+    int fac;		//declare fac variable to store factorial of x
+    if(x==0)		//if x is 0 return 1
+    return 1;
+    fac=x*(fact(x-1));	
+    return fac;
+}

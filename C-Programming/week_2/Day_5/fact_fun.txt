@@ -1,0 +1,21 @@
+//WAP to find the factorial of number using function with return and arguments
+#include<stdio.h>           //include standard input and output header file using preprocessor directive
+int fact(int);              //declare fact function with int return type and int arguments
+int main()                  //start main function
+{
+    int fac,n;              //declare a integer type variable and temporary variable-'fac' to store the return value of fact().
+    puts("Enter number");   //statement to enter the number
+    scanf("%d",&n);			//input integer variable-n
+    fac=fact(n);            //call a fact() and assign its return to variable-'fac'
+    printf("Factorial of %d is %d",n,fac); //print the Factorial of the number-n
+}
+int fact(int x)         //definition of fact() by getting argument from main()
+{
+int i,fac=1;			//declare i,fac
+    
+    for(i=1;i<=x;i++)       //define for loop to find the Factorial of a number 			
+    {
+        fac=fac*i;          //multiply fac with i
+    }
+    return fac;             //return the fac to main()
+}

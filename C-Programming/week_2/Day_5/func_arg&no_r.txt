@@ -1,0 +1,39 @@
+//WAP to perform arthematic operations using Function with no return but with arguments:
+#include<stdio.h>
+void sum (int ,int );			//sum function declartion
+void sub (int ,int );			//sub function declartion
+void mul (int ,int );			//mul function declartion
+void divs (int ,int );			//divs function declaration
+int main ()
+{
+int x,y;
+printf("Enter Values of x and y\n");
+scanf("%d %d",&x,&y);
+  sum (x,y);			//calling sum()
+  sub (x,y);			//calling sub()
+  mul (x,y);			//calling mul()
+  divs (x,y);			//calling divs()
+}
+
+void sum (int n1,int n2)				//Sum function definition
+{
+  printf ("Sum=%d\n", n1 + n2);	//prints the result of Addition operation
+}
+
+void sub (int n1,int n2)				//sub function definition
+{
+  
+  printf ("Subration=%d\n", n1 - n2);	//prints the result of Subtraction operation
+}
+
+void mul (int n1,int n2)				//mul function definition
+{
+  
+  printf ("Multiplication=%d\n", n1 * n2);	//prints the result of Multiplication operation
+}
+
+void divs (int n1,int n2)				//divs function definition
+{
+  
+  printf ("Division=%d\n", n1/n2);	//prints the result of division operation
+}

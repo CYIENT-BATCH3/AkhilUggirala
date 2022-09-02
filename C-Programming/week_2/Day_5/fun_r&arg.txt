@@ -1,0 +1,81 @@
+//function with return and arguments
+#include <stdio.h>
+float sum (int x,int y)				//Sum function definition 
+{
+  return x+y;                         //returns the sum of two integers as float
+}
+int main()
+{
+    int n1,n2;                          //declare two integer variables
+    float y;                            //declare a float variable to store the value of sum function whose return type is float
+    puts("Enter n1 and n2");            //write a statement to enter n1 and n2
+    scanf("%d %d",&n1,&n2);             //input n1 and n2
+    y=sum(n1,n2);                       //call sum(n1,n2) and assign to y
+    printf("sum=%f ",y);                //print the float sum of two integer variables 
+}
+
+
+//function with return and arguments
+#include <stdio.h>
+int sum (int x,float y)				//Sum function definition with int return type and arg1- int arg2-float
+{
+  return x+y;                         //returns the sum of two integers as int
+}
+int main()
+{
+    int n1,y;                          //declare two integer variables
+    float n2;                            //declare a float variable 
+    puts("Enter n1-integer and n2-float");            //write a statement to enter n1 and n2
+    scanf("%d %f",&n1,&n2);             //input n1 and n2
+    y=sum(n1,n2);                       //call sum(n1,n2) and assign to y
+    printf("sum=%d",y);                //print the float sum of two integer variables 
+}
+
+
+
+Multiplication:
+#include <stdio.h>
+int mul (int x,int y)				//Sum function definition with int return type and arg1- int arg2-int
+{
+  return x*y;                         //returns the mul of two integers as int
+}
+int main()
+{
+    int n1,n2,y;                          //declare two integer variables
+    puts("Enter n1-integer and n2-integer");            //write a statement to enter n1 and n2
+    scanf("%d %d",&n1,&n2);             //input n1 and n2
+    y=mul(n1,n2);                       //call mul(n1,n2) and assign to y
+    printf("mul=%d",y);                //print the  mul of two integer variables 
+}
+
+
+Subtraction:
+#include <stdio.h>
+int sub(int x,int y)				//Sum function definition with int return type and arg1- int arg2-int
+{
+  return x-y;                         //returns the subof two integers as int
+}
+int main()
+{
+    int n1,n2,y;                          //declare two integer variables
+    puts("Enter n1-integer and n2-integer");            //write a statement to enter n1 and n2
+    scanf("%d %d",&n1,&n2);             //input n1 and n2
+    y=sub(n1,n2);                       //call sub(n1,n2) and assign to y
+    printf("sub=%d",y);                //print the  subtraction of two integer variables 
+}
+
+Division:
+#include <stdio.h>
+float divs(int x,int y)				//Sum function definition with int return type and arg1- int arg2-int
+{
+  return x/y;                         //returns float value of the division of two integers
+}
+int main()
+{
+    int n1,n2;                          //declare two integer variables
+float y;
+    puts("Enter n1-integer and n2-integer");            //write a statement to enter n1 and n2
+    scanf("%d %d",&n1,&n2);             //input n1 and n2
+    y=mul(n1,n2);                       //call mul(n1,n2) and assign to y
+    printf("mul=%f",y);                //print the  mul of two integer variables 
+}

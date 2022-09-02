@@ -1,0 +1,22 @@
+//WAP to count number of digits in an given number using recursive function
+
+#include <stdio.h>          //include standard input and output header file using preprocessor directive
+int cod(int );              //declare a function that counts no.of digits in a given number as cod()
+int cnt=0;                  //declare cnt=0 globally
+int main()                  //start main function
+{
+    int n,nofd;   //declare n-input variable and nofd- variable to get no.of digits in a given number
+    puts("Enter Number to find no.of digits in it");        //statement to enter the number to find its no.of digits
+    scanf("%d",&n);                 //input the number to find its no.of digits
+    nofd=cod(n);                    //call cod() and store its return value in nofd-variable
+    printf("No.of Digits in %d is %d\n",temp,nofd);   //after receiving a return value from cod() function 
+}
+int cod(int a)              //definition of count_of_digits cod()
+{
+    if(a!=0)                //check wheter a is non zero or not 
+    {
+    cnt++;                  //increment cnt if a is non-zero
+    cod(a/10);              //remove a digit after counting
+    }
+    return cnt;             //return the cnt value to main() after a is becoming zero
+}

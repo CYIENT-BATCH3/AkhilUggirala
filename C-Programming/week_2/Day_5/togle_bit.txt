@@ -1,0 +1,16 @@
+//WAP to toggle a bit in a byte
+#include <stdio.h>          //include standard input and output header file using preprocessor directive
+int E_Set(int x,int p)      //function to toggle a bit
+{
+    int tg_v;               //declare a variable to store toggled value
+    tg_v=x^(1<<p);          //formula to get toggled value
+    return tg_v;            //return tog value
+}
+int main()                  //start main()
+{
+    int num,ps,z;           //declare variables
+    puts("Enter the number and position to be toggeled");       //statement to enter a num and bit to be toggled
+    scanf("%d %d",&num,&ps);            //input the number and bit position
+    z=E_Set(num,ps);                    //assign the return value of function into z
+    printf("before and toggled:%d",z);  //using z variable print the toggled value
+}

@@ -1,0 +1,54 @@
+#include<stdio.h>
+int music_player(int k)
+{
+    printf("Music Player Display:\n");
+switch (k)
+    {
+        case 1:         //if k=1 call play()
+        play();
+        break;
+        case 2:         //if k=2 call stop()   
+        stop();
+        break;      
+        case 3:         //if k=3 call pause()
+        pause();
+        break;
+        case 4:         //if k=4 call crnt_song()
+        crnt_song();
+        break;
+        case 5:         //if k=5 call list_songs()
+        list_songs();
+        break;
+        default :       //in case of invalid key
+        printf("Invalid Key\n");
+        
+    }
+}
+void play()         //define play() to start playing
+{
+    printf("Status: Song is playing");
+}
+void stop()         //define stop() is to stop playing
+{
+    puts("Status: Song is stopped");
+}
+void pause()        //define pause() is to pause playing
+{
+    puts("Status: Song is paused");
+}
+void crnt_song()    //define crnt_song() to display current song
+{
+    puts("Current_song is: song1_gsfjdsg.mp3");
+}
+void list_songs()   //define list_songs() to display list of songs
+{
+    printf("Songs_List:\nsong1_gsfjdsg.mp3\nsong2_dgweyegu.mp3\nsong3_uewrwguvgf.mp3\nsong4_jfhvjhbsdf.mp3\nsongn_ttufwgdey.mp3\n");
+}
+int main()
+{
+    printf("    MENU\nKey-1 -- Play\nKey-2 -- Stop\nKey-3 -- Pause\nKey-4 -- Current_Song\nKey-5 -- Playlist\n");
+    int k;		//declare a variable to input key value
+    puts("Press Key");
+    scanf("%d",&k);		//input key variable
+    music_player(k);		//call music_player() with k as input
+}

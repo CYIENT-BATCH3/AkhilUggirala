@@ -1,0 +1,68 @@
+//WAP to find sum of two variables using function with return type and but no arguments
+#include<stdio.h>       //include standard input and output header file using preprocessor directive
+int sum()           //define addition function with return type but of no arguments
+{
+    int a,b;    //declare variables of int type
+    puts("Enter values of a and b");
+    scanf("%d %d",&a,&b);       //input variables a and b
+    return a+b;                 //return a+b
+}
+int main()                      //start main function
+{
+    int z;                      //declare a varaible to store the return value of sum()
+    z=sum();                    //assign sum() return to variable z
+    printf("%d",z);             //prints the z(return value of sum())
+}
+
+multiplication:
+
+#include<stdio.h>       //include standard input and output header file using preprocessor directive
+int mul()           //defining multiplication function with return type but of no arguments
+{
+    int a,b;    //declare variables of int type
+    puts("Enter values of a and b");
+    scanf("%d %d",&a,&b);       //input variables a and b
+    return a*b;                 //return a*b
+}
+int main()                      //start main function
+{
+    int z;              //declare a varaible to store the return value of mul()
+    z=mul();                    //assign mul() return to variable z
+    printf("%d",z);             //prints the z(return value of mul())
+}
+
+
+Subtraction:
+
+#include<stdio.h>       //include standard input and output header file using preprocessor directive
+int sub()           //function with return type but of no arguments
+{
+    int a,b;    //declare variables of int type
+    puts("Enter values of a and b");
+    scanf("%d %d",&a,&b);       //input variables a and b
+    return a-b;                 //return a-b
+}
+int main()                      //start main function
+{
+    int z;              //declare a varaible to store the return value of sub()
+    z=sub();                    //assign sub() return to variable z
+    printf("%d",z);             //prints the z(return value of sub())
+}
+
+Division:
+
+#include<stdio.h>       //include standard input and output header file using preprocessor directive
+int div();
+int main()                      //start main function
+{
+    int z;              //declare a varaible to store the return value of div()
+    z=div();                    //assign div() return to variable z
+    printf("%d",z);             //prints the z(return value of div())
+}
+int div()           //function with return type but of no arguments
+{
+    int a,b;    //declare variables of int type
+    puts("Enter values of a and b");
+    scanf("%d %d",&a,&b);       //input variables a and b
+    return a/b;                 //return a/b
+}

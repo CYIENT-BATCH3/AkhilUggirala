@@ -1,0 +1,26 @@
+//wap for functionality of a music player
+#include <stdio.h>          //include standard input and output header file using preprocessor directive
+int music_player(int key)                    //define music_player()
+{
+    printf("Music_Player instructed to");		
+    if(key==1)					//execute the statemets based on key value
+    printf(" Play Music\n");
+    else if(key==2)
+    puts(" Stop Music");
+    else if(key==3)
+        puts(" Pause Music");
+    else if(key==4)
+    puts(" Display Current_song: song_XXX is playing");
+    else if(key==5)
+    printf(" Display List of Songs:\nsong1_gsfjdsg.mp3\nsong2_dgweyegu.mp3\nsong3_uewrwguvgf.mp3\nsong4_jfhvjhbsdf.mp3\nsongn_ttufwgdey.mp3\n");
+    else
+    puts("Invalid Key");		
+}
+int main()
+{
+    printf("    MENU\nKey-1 -- Play\nKey-2 -- Stop\nKey-3 -- Pause\nKey-4 -- Current_Song\nKey-5 -- Playlist\n");		
+    int k;		//declare a variable to input key
+    puts("Press Key");	//statement to enter key value
+    scanf("%d",&k);	//input key value
+    music_player(k);	//call music_player() with k value as input
+}

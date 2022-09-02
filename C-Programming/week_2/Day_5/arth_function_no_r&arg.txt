@@ -1,0 +1,43 @@
+//WAP to perform addition, subtraction, multiplication and division using functions 
+
+function with no return and no arguments
+
+#include<stdio.h>		//include standard input and output header file using preprocessor directive
+void sum ();			//sum function declartion
+void sub ();			//sub function declartion
+void mul ();			//mul function declartion
+void divs ();			//divs function declaration
+int
+main ()
+{
+  sum ();			//calling sum()
+  sub ();			//calling sub()
+  mul ();			//calling mul()
+  divs ();			//calling divs()
+}
+
+void sum ()				//Sum function definition
+{
+  int n1 = 11, n2 = 20;
+  printf ("Sum=%d\n", n1 + n2);	//prints the result of Addition operation
+}
+
+void sub ()				//sub function definition
+{
+  int n1 = 11, n2 = 22;
+  printf ("Subration=%d\n", n1 - n2);	//prints the result of Subtraction operation
+}
+
+void mul ()				//mul function definition
+{
+  int n1 = 11, n2 = 11;
+  printf ("Multiplication=%d\n", n1 * n2);	//prints the result of Multiplication operation
+}
+
+void divs ()				//divs function definition
+{
+  int n1 = 111, n2 = 11;
+  printf ("Division=%d\n", n1 / n2);	//prints the result of division operation
+}
+
+
