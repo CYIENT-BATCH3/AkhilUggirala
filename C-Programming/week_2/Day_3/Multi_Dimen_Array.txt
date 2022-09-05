@@ -1,0 +1,28 @@
+//WAP to read and print the elements of multi-dimensional std::array
+#include <stdio.h>
+int main()
+{
+    int i,j,k,m,n,o;
+    int a[5][5][5];
+    puts("Enter m -No of 2D-Arrays || n - No.of 1D-Arrays || o - No.of Elements in each ");
+    scanf("%d %d %d",&m,&n,&o);
+    for(i=0;i<m;i++)
+    {
+    for(j=0;j<n;j++)
+    {
+        for(k=0;k<o;k++)
+        scanf("%d",&a[i][j][k]);
+    }
+    }
+    for(i=0;i<m;i++)
+    {
+    for(j=0;j<n;j++)
+    {
+        for(k=0;k<o;k++)
+        //printf("a[%d][%d][%d]=%d ",i,j,k,a[i][j][k]);
+        printf("%d ",a[i][j][k]);
+        printf("\n");
+    }
+    printf("\n");
+    }
+}

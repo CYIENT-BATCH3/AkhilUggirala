@@ -1,0 +1,30 @@
+//WAP to print the sum of right-diagonal elements in 
+#include<stdio.h>
+int main()
+{
+int a[4][4];
+    int i,j,sum=0,m,n;
+    puts("enter No of rows and columns");
+    scanf("%d %d",&m,&n);
+    printf("Enter elements of %dx%d Array\n",m,n);
+    for(i=0;i<m;i++)
+    {
+    for(j=0;j<n;j++)
+    scanf("%d",&a[i][j]);
+    }
+    printf("Array:\n");
+    for(i=0;i<m;i++)
+    {
+        
+    for(j=0;j<n;j++)
+    printf("%d ",a[i][j]);
+    printf("\n");
+    }
+    i=m-1;
+    for(j=n-1;j>=0;j--)
+    {
+        sum=sum+a[i][j];
+        i--;
+    }
+    printf("sum of diagonal elements=%d",sum);
+}

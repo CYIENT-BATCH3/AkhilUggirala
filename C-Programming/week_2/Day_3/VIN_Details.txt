@@ -1,0 +1,15 @@
+//WAP to get the VIN of particular Plant
+#include <stdio.h>
+int main()
+{
+    int i;
+    char VIN1[25]="1CYLE10PZYE10000", VIN2[25]="1CYLE10PZYH10000",VIN3[25]="1CYLE10PZYP10000";
+    printf("Enter 0 - EC-Plant  || 1  - HY-Plant  || 2 - PU-Plant\n");
+    scanf("%d",&i);
+    if(i==0)
+    printf("%s is of EC Plant",VIN1);
+    else if(i==1)
+    printf("%s is of HY Plant",VIN2);
+    else
+    printf("%s is of PU Plant",VIN3);
+}

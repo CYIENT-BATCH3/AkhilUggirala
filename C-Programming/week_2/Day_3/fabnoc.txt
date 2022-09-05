@@ -1,0 +1,17 @@
+//WAP to print fabinocci series
+#include <stdio.h>	//include standard input and output header file using preprocessor directive
+
+int main()		//starts main function
+{
+    int n1=0,n2=1,n3;	//declare integer variables
+    printf("%d ",n1);	//print the intial value 0 
+    while(n2<20)
+    {
+        n3=n1+n2;	//sum the previous 2 values
+        printf("%d ",n3);	//print the sum value of n3
+        n2=n1;
+        n1=n3;
+        
+    }
+
+}
