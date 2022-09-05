@@ -1,0 +1,286 @@
+/* Write program for IVRS based mobile functionality access
+Music Function-1,2,3,4,5,9-break;
+Phone Function,
+1-call 2-msg 3-recvcall 9-break 
+Camera function- Enables GPS function then 1-Taking Picture 2-Record Video 
+3- List 10 imagers 9- Break*/
+#include<stdio.h>			//include standard input and output header file using preprocessor directive
+int brk;				//declare a global variable brk
+int status;				//declare a global variable status
+void phone()						//define phone()				
+{
+    int ph_key;
+    puts("Enter the Number to select the particular function");
+    puts("1 - To call      ||  2 - Receive Call");
+    puts("3 - Send Message ||  4 - Read Message");
+    puts("9 - Break");
+    scanf("%d",&ph_key);					//input a key to select particular function of phone
+    switch(ph_key)
+    {
+        case 1:
+        status=call_out();
+        if(status==1)
+        puts("Status:Call was ended");
+        puts("#To Exit- press key - 9");
+        scanf("%d",&brk);
+        if(brk==9)
+        puts("Status:Exit");
+        break;
+        case 2:
+        status=call_inc();
+        if(status==1)
+        puts("Status:Call was ended");
+        puts("#To Exit- press key - 9");
+        scanf("%d",&brk);
+        if(brk==9)
+        puts("Status:Exit");
+        break;
+        case 3:
+        status=send_msg();
+        if(status==1)
+        puts("Status:Message Sent Succesfully");
+        puts("#To Exit- press key - 9");
+        scanf("%d",&brk);
+        if(brk==9)
+        puts("Status:Exit");
+        break;
+        case 4:
+        status=read_msg();
+        if(status==1)
+        puts("Status:Message_Read Succesfully");
+        puts("#To Exit - press key - 9");
+        scanf("%d",&brk);
+        if(brk==9)
+        puts("Status:Exit");
+        break;
+        case 9:
+        puts("Invalid Mode_Operation.Terminated");
+        break;
+        default:
+        puts("Invalid Function opted");
+    }
+}
+int call_out()					//define call_out() for outgoing call
+{
+    puts("Outgoing Call is going on");
+    puts("#To end the call - press key - 9");
+    scanf("%d",&brk);
+    if(brk==9)
+    return 1;
+}
+int call_inc()					//define call_inc() for incoming call
+{
+    puts("Incoming Call is going on");
+    puts("#To end the call - press key - 9");
+    scanf("%d",&brk);
+    if(brk==9)
+    return 1;
+}
+int send_msg()					//define send_msg() for sending a message
+{
+    char msg[100];
+    puts("Input the text to send");
+    scanf("%s",&msg);
+    return 1;
+}
+int read_msg()					//define read_msg() for reading incoming message
+{
+    puts("New_Message: mmmm_mmmm_mmmm");
+    puts("#To close Messenger - press key - 9");
+    scanf("%d",&brk);
+    if(brk==9)
+    return 1;
+}
+void music()			//define music() for music player
+{
+    printf("    MENU\nKey-1 -- Play\nKey-2 -- Stop\nKey-3 -- Pause\nKey-4 -- Current_Song\nKey-5 -- Playlist\n");
+    int k;		//declare a variable to input key value
+    puts("Press Key");
+    scanf("%d",&k);		//input key variable
+    printf("Music Player:\n");
+switch (k)
+    {
+        case 1:                 //if k=1 call play()
+        status=play();
+        if(status==1)
+        puts("#To Exit - press key - 9");
+        scanf("%d",&brk);
+        if(brk==9)
+        puts("Status:Exit");
+        break;
+        case 2:         //if k=2 call stop()   
+        status=stop();
+        if(status==1)
+        puts("#To Exit - press key - 9");
+        scanf("%d",&brk);
+        if(brk==9)
+        puts("Status:Exit");
+        break;      
+        case 3:         //if k=3 call pause()
+        status=pause();
+        if(status==1)
+        puts("#To Exit - press key - 9");
+        scanf("%d",&brk);
+        if(brk==9)
+        puts("Status:Exit");
+        break;      
+        case 4:         //if k=4 call crnt_song()
+        status=crnt_song();
+        if(status==1)
+        puts("#To Exit - press key - 9");
+        scanf("%d",&brk);
+        if(brk==9)
+        puts("Status:Exit");
+        break;      
+        case 5:         //if k=5 call list_songs()
+        status=list_songs();
+        if(status==1)
+        puts("#To Exit - press key - 9");
+        scanf("%d",&brk);
+        if(brk==9)
+        puts("Status:Exit");
+        break;
+        default :       //in case of invalid key
+        printf("Invalid Key\n");
+    }
+}
+int play()         //define play() to start playing
+{
+    printf("Status: Song is playing\n");
+    return 1;
+}
+int stop()         //define stop() is to stop playing
+{
+    puts("Status: Song is stopped");
+    return 1;
+}
+int pause()        //define pause() is to pause playing
+{
+    puts("Status: Song is paused");
+    return 1;
+}
+int crnt_song()    //define crnt_song() to display current song
+{
+    puts("Current_song is: song1_gsfjdsg.mp3");
+    return 1;
+}
+int list_songs()   //define list_songs() to display list of songs
+{
+    printf("Songs_List:\nsong1_gsfjdsg.mp3\nsong2_dgweyegu.mp3\nsong3_uewrwguvgf.mp3\nsong4_jfhvjhbsdf.mp3\nsongn_ttufwgdey.mp3\n");
+    return 1;
+}
+void camera()			//define camera() for camera 
+{
+    int cam_key;
+    char GPS;
+    puts("Enable GPS by clicking -A(Allow)*");
+    scanf(" %c",&GPS);
+    if(GPS=='A')
+    {
+    puts("GPS is Enabled");
+    puts("Enter the Number to select the particular function");
+    puts("1 - Click Picture  ||  2 - Record Video");
+    puts("3 - Image_List  ||  9 - break");
+    scanf(" %d",&cam_key);
+    switch(cam_key)
+    {
+        case 1:
+        status=capture();
+        if(status==1)
+        puts("#To Exit - press key - 9");
+        scanf("%d",&brk);
+        if(brk==9)
+        puts("Status:Exit");
+        break;
+        case 2:
+        status=video_recorder();
+        if(status==1)
+        puts("#To Close Recorder - press key - 9");
+        scanf("%d",&brk);
+        if(brk==9)
+        puts("Status:Closed");
+        break;
+        case 3:
+        status=image_list();
+        if(status==1)
+        puts("#To Exit - press key - 9");
+        scanf("%d",&brk);
+        if(brk==9)
+        puts("Status:Exit");
+        break;
+        default :
+        puts("Invalid Input");
+    }
+    }
+    else
+    puts("GPS is Enabling is Mandatory - you can't goahead\nThank you");
+}
+int capture()			//define capture() for image capturing
+{
+    char cap_key;
+    puts("Image Mode is ON");
+    puts("Press C to Capture");
+    scanf(" %c",&cap_key);
+    if(cap_key=='C'){
+    puts("Image captured succesfully");
+    puts("#To close Camera Application press key - 9");
+    scanf("%d",&brk);
+    if(brk==9)
+    return 1;}
+    else{
+    puts("error_occurred, please try after sometime");
+    puts("#To close Camera Application press key - 9");
+    scanf("%d",&brk);
+    if(brk==9)
+    return 1;}
+}
+int video_recorder()		//define video_recorder() for video 
+{
+    char vid_key;
+    puts("video recorder application is available now");
+    puts("#press R to Record");
+    puts("#Press S to Stop_Recording");
+    puts("#Press P to Pause");
+    scanf(" %c",&vid_key);
+    switch(vid_key)
+    {
+        case 'R':
+        puts("recording_started");
+        return 1;
+        case 'S':
+        puts("recording_stopped");
+        return 1;
+        case 'P':
+        puts("recording_paused");
+        return 1;
+        default :
+        puts("Invalid key");
+    }
+}
+int image_list()			//define image_list() for list of images
+{
+    puts("image_1.jpeg\nimage_2.jpeg\nimage_3.jpeg\nimage_4.jpeg\n.\n.\n.\n.\nimage_n.jpeg");
+    return 1;
+}			
+int main()				//start main()
+{
+    int mode;				//declare mode integer variable for selecting mode
+    puts("Enter the number for mode selection");
+    puts("Mode - Key");
+    puts("phone - 1\nMusic - 2\nCamera - 3");
+    scanf("%d",&mode);			//input the mode value
+    switch(mode)
+    {
+        case 1:
+        phone();			//if mode=1 it calls phone()
+        break;
+        case 2:
+        music();			//if mode=2 it calls music()
+        break;
+        case 3:
+        camera();			//if mode=3 it calls camera()
+        break;
+        default:
+        puts("Invalid Mode selection");		//incase of invalid input 
+    }
+}
