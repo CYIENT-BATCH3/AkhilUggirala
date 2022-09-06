@@ -1,9 +1,0 @@
-//WAP to input first and last name of a person using string. 
-#include<stdio.h>		//include standard input and output header file using preprocessor directive
-int
-main ()				//start main()
-{
-  char first_name[15] = {'a','k','h','i','l'}, last_name[10] = {'u','g','g','i','r','a','l','a'};	//declare & initialize 2 array of characters for first and last names
-
-  printf ("First Name: %s Last Name: %s\n", first_name, last_name);	//print the first and last names
-}
