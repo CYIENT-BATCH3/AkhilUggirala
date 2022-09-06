@@ -1,0 +1,14 @@
+//WAP to print random numbers
+#include<stdio.h>       //include standard input and output header file using preprocessor directive
+#include<stdlib.h>      //include standard library header file using preprocessor directive
+int main()              //start main()
+{
+    int i,n,l;            //declare i for refernce and n  
+    puts("Enter no.of random numbers");
+    scanf("%d",&l);     //input the no.of numbers required 
+    for(i=0;i<l;i++)
+    {
+        n=rand();       //assign rand variable in n
+        printf("n%d=%d\n",i+1,n);     //print the random variable below 200 
+    }
+}
