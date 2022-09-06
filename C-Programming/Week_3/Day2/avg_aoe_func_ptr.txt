@@ -1,0 +1,28 @@
+//WAP to find the average of elements of an array using function 
+#include<stdio.h>       //include standard input and output header file using preprocessor directive
+float average(int *x,int n)         //define a function for finding average for elements of an array
+{
+    int i,sum=0;                    //declare an i for reference and sum=0
+    float res;                      //declare a float variable to store the result of average 
+    for(i=0;i<n;i++)                //define a for loop to sum all elements of an array
+    {
+        sum=sum+x[i];               
+    }
+    printf("Sum:%d\n",sum);         //print the sum of all the elements
+    res=(sum/n);                    //divide sum with no.of elements
+    return res;                     //return float res
+}
+int main()
+{
+    int a[20],i,n;                   //declare an array and i for referencing while inputting elements,n for no.of elements
+    float avg;                      //declare avg to store the average float value
+    puts("Enter no of variables");
+    scanf("%d",&n);                 //input no.of elements
+    puts("Enter the elements of an array");
+    for(i=0;i<n;i++)
+    {
+    scanf("%d",&a[i]);              //input the elements for index of the array of integers
+    }
+    avg=average(a,n);               //call average()function with array address and n as arguments
+    printf("result:%f",avg);        //print the average returned by average()
+}

@@ -1,0 +1,11 @@
+//WAP to perform pre-increment variable using pointer
+#include <stdio.h>          //include standard input and output header file using preprocessor directive
+int main()                  //start main()
+{
+    int a=6,*p;             //declare varibale and a pointer variable
+    int b=12,*q;       //declare a float variable and a pointer variable 
+    p=&a;                   //assign address of a to *p
+    q=&b;                   //assign the address of b to *q
+    printf("a=%d\n",++*p);           //pre_increment variable using pointer
+    printf("b=%d\n",++*q);           //pre_increment variable using pointer
+}

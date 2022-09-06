@@ -1,0 +1,21 @@
+//WAP to read 3 different type of variables and print the address and variables using pointer also address of every pointer
+#include <stdio.h>              //include standard input and output header file using preprocessor directive
+int main()                      //strat main()
+{
+    int n,*pi;                  //declare an integer variable and pointer to store the variable address
+    float f,*pf;                //declare an floar variable and pointer to store the variable address
+    char ch,*pc;                //declare an char variable and pointer to store the variable address
+    pi=&n;                      //assign the adrress of variable n to pointer variable
+    pf=&f;                      //assign the adrress of variable f to pointer variable
+    pc=&ch;                     //assign the adrress of variable ch to pointer variable
+    puts("enter n-integer and f-float values");
+    scanf("%d %f",pi,pf);       //input integer and float values using pointer variable
+    puts("Enter a Character-ch");
+    scanf(" %c",pc);           //input the character variable using pointer variable
+    printf("Add(integer):%x Add(float):%x Add(char):%x\n",pi,pf,pc);
+    //print the addresses of all the variables using pointer
+    printf("Output - Value(n):%d Value(f):%f Character(ch):%c\n",*pi,*pf,*pc);
+    //print the values of all the variables using pointer
+    printf("add(int_ptr):%p add(floa_ptr):%p add(char_ptr):%p\n",&pi,&pf,&pc);
+    //print the address of all pointers
+}

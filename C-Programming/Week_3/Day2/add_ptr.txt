@@ -1,0 +1,11 @@
+//WAP to perform addition on pointer 
+#include <stdio.h>          //include standard input and output header file using preprocessor directive
+int main()                  //start main()
+{
+    int a=6,*p;             //declare varibale and a pointer variable
+    float b=12.5789,*q;       //declare a float variable and a pointer variable 
+    p=&a;                   //assign address of a to *p
+    q=&b;                   //assign the address of b to *q
+    printf("add(p):%p add(q):%p\n",p,q);        //print the address of pointer initially
+    printf("p+1:%p  q+3:%p",p+1,q+1);           //print the address of pointer after summing it with a number
+}

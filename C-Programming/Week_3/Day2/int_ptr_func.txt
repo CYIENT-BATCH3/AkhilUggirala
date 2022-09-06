@@ -1,0 +1,15 @@
+//WAP to return a pointer value to the function
+#include<stdio.h>           //include standard input and output header file using preprocessor directive
+int a;      //declare global variable
+int *get()      //define a pointer function of integer type
+{
+    a=789;      //assign a value to global variable a
+    return (&a);        //return address of a
+}
+int main()      //start main()
+{
+    int *res;   //declare a pointer variable
+    res=get();  //store the address returned by get() in res
+    printf("result:%d\n",*res); //print the variable value pointed by pointer
+    printf("address:%p",res);   //print the address of the pointer
+}
