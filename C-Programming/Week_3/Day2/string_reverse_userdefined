@@ -1,0 +1,17 @@
+// WAP to reverse a string user-defined
+#include <stdio.h>		//include standard input and output header file using preprocessor directive
+#include<string.h>		//include the string header file
+int main() 			//start main()
+{
+    int i,j,m,n;		//declare 2 int variables m,n for length of the strings and i,j for referncing index of the string
+   char str[20],str1[20];       //declare 2 strings
+puts("Enter the string");
+scanf("%s",str);                //input the string str
+m=strlen(str);                  //store the length of string in m
+n=m;
+for(i=m-1,j=0;i>=0,j<=n-1;i--,j++)      //define a for loop for stroing the string1 in reverse order into string2
+{
+    str1[j]=str[i];
+}
+    printf("Actual:%s Reverse:%s",str,str1);                  //print the string in reverse order
+}
