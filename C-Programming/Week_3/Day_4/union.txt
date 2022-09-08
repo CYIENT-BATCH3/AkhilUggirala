@@ -1,0 +1,30 @@
+// WAP to union
+#include <stdio.h>   //include standard input and output header file using preprocessor directive
+union emp	     //declare a union
+{
+    char name[10];      //declare a char variable name
+    int ID;        //declare a char variable ID
+    int age;            //declare a int variable age
+    char role[15];	//declare a char variable for role
+}emp1;
+int main() {
+    scanf("%s%s%d%s",&emp1.name,&emp1.ID,&emp1.age,&emp1.role);//input the data during run-time
+    
+    printf("Name:%s ID:%d Age:%d Designation:%s\n",emp1.name,emp1.ID,emp1.age,emp1.role);//printing all the members at a time
+    printf("%d",emp1.age);		//printing one member of union
+}
+
+//program for initializing values to members of union statically
+#include <stdio.h>
+union emp{
+    char name[10];      //declare a char variable name
+    int ID;        //declare a char variable ID
+    int age;            //declare a int variable age
+    char role[15];
+}emp1;
+int main()
+{
+union emp emp1={"Akhil","1235.66",23,"embdengnr"};
+printf("Name:%s ID:%d Age:%d Designation:%s\n",emp1.name,emp1.ID,emp1.age,emp1.role);	//printing all the members at a time
+printf("%d",emp1.age);	//printing one member of union
+}

@@ -1,0 +1,29 @@
+//WAP for employee data base
+#include<stdio.h>       //include standard input and output header file using preprocessor directive
+struct employee     //declare a structure
+{
+    char ID[10];        //declare a char variable ID
+    char name[15];      //declare a char variable name
+    int age;            //declare a int variable age
+    char role[10];      //declare a char variable role
+};
+int main()
+{
+    struct employee emp[5];
+    int i=1,n;
+    puts("Enter no.of employees-n:");
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
+    {
+    printf("Enter the ID:");
+    scanf("%s",emp[i].ID);       //input the ID 
+    printf("Enter Employee Name:");
+    scanf("%s",emp[i].name);     //input name of employee
+    printf("enter the designation of an employee:");
+    scanf("%s",emp[i].role);    //input designation of employee
+    printf("Enter age of employee:");
+    scanf("%d",&emp[i].age);      //input age
+    }
+    for(i=1;i<=n;i++)
+    printf("Name:%s ID:%s Age:%d Designation:%s\n",emp[i].name,emp[i].ID,emp[i].age,emp[i].role);    //print the details of employee
+}
