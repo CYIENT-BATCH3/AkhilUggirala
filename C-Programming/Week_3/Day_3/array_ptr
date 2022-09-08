@@ -1,0 +1,13 @@
+//WAP to assign values and print elements of an array using pointer
+#include <stdio.h>      //include standard input and output header file using preprocessor directive
+int main()      //start main()
+{
+    int p[10],i,n;        //declare an array and i for referncing , n for no.of elements
+    puts("enter no.of elements:");
+    scanf("%d",&n);         //input value for no.of elements
+    puts("Enter the elements of an array");
+    for(i=0;i<n;i++)
+    scanf("%d",(p+i));      //input elements of array
+    for(int i=0;i<n;i++)
+    printf("p[%d]=%d\n",i,*(p+i));      //print the elements of array by dereferencing pointer
+}
