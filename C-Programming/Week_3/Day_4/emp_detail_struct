@@ -1,0 +1,25 @@
+//WAP for employee details
+#include<stdio.h>    //include standard input and output header file using preprocessor directive
+struct employee     //declare a structure
+{
+    char ID[10];        //declare a char variable ID
+    char name[15];      //declare a char variable name
+    int age;            //declare a int variable age
+    char role[10];      //declare a char variable role
+    long phno;		//declare phone number
+}emp1;
+int main()
+{
+    puts("Enter the ID:");
+    scanf("%s",&emp1.ID);       //input the ID 
+    puts("Enter Employee Name:");
+    scanf("%s",&emp1.name);     //input name of employee
+    puts("Enter age of employee:");
+    scanf("%d",&emp1.age);      //input age
+    puts("Enter contact number:");
+    scanf("%li",&emp1.phno);	//input the contact number
+    puts("enter the designation of an employee:");
+    scanf(" %s",&emp1.role);    //input designation of employee
+    puts("Employee Details");
+    printf("Name:%s ID:%d Age:%d Phone No:%li Designation:%s\n",emp1.name,emp1.ID,emp1.age,emp1.phno,emp1.role);    //printing details of employee
+}
