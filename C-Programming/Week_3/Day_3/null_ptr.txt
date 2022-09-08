@@ -1,0 +1,8 @@
+//WAP to implement null pointer
+#include<stdio.h>           //include standard input and output header file using preprocessor directive
+int main()          //start main()
+{
+    int a=10;
+    int *p='\0';     //intialize pointer with null value 
+    printf("%p",p);  //print the value of pointer p
+}

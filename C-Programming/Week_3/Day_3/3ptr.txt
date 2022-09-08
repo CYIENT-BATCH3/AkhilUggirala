@@ -1,0 +1,12 @@
+//WAP to print value by dereferencing triple pointer and print the address of triple pointers
+#include <stdio.h>          //include standard input and output header file using preprocessor directive
+int main()                  //start main()
+{
+    int a=10,*p,**p1,***p2;     //declare a int variable and pointers
+    p=&a;
+    p1=&p;
+    p2=&p1;
+    printf("Value by dereferencing p2 %d\n",(*(*(*p2))));       //print the value by dereferncing triple pointer
+    printf("Address of a:%p Address of p:%p \n",&a,&p);         //print Address of a and pointer 'p'
+    printf("Address of p1:%p\nAddress of p2:%p\n",&p1,&p2);     //print the address of double poiner 'p1' and triple pointer 'p2'
+}

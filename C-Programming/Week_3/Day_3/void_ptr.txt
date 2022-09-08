@@ -1,0 +1,16 @@
+//WAP to implement void pointer
+#include<stdio.h>           //include standard input and output header file using preprocessor directive
+int main()          //start main()
+{
+    int a=10;   //declare an integer variable
+    float f=2564.789;       //declare a float variable
+    void *p,*p1;     //declare a pointer as void pointer 
+    p=&a;
+    printf("Address of 'a':%x\nAddress of Void Pointer P:%x\n",&a,&p);
+    //prints the address of variable and  pointer pointing to it 
+    printf("Value of 'a' by direct access:%d Value of 'a' by indirect access:%d",a,*(int *)p);   //print value of a by direct and indirect access by typecasing void pointer
+    printf("Address of 'f':%x\nAddress of Void Pointer p1:%x\n",&a,&p1);     //prints the address of variable and  pointer pointing to it 
+
+    printf("Value of 'f' by direct access:%d Value of 'f' by indirect access:%f",f,*(int *)p1);  //print value of a by direct and indirect access by typecasing void pointer
+    
+}

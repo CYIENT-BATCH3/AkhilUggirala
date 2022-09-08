@@ -1,0 +1,27 @@
+//WAP to typecast the void into different type of varibles
+#include <stdio.h>      //include standard input and output header file using preprocessor directive
+int main()              //start main()
+{
+    int a=20;           //declare and intialize an integer variable
+    char ch='a';        //declare and intialize a character variable
+    float f=24.5500;    //declare and intialize a float variable
+    double d=456789;    //declare and intialize a double variable
+    long double ld=24593.45563157878;       //declare and intialize a long double variable
+    void *ptr;              //declare a void pointer
+    ptr=&a;                 //assign address of integer variable to void pointer
+    printf("Dereferncing void pointer by typecasting void into int ptr:%d\n",*(int *)ptr);
+    //print value of variable by Dereferncing void pointer after typecasting void pointer to int pointer
+    ptr=&ch;                //assign address of char variable to void pointer
+    printf("Dereferncing void pointer by typecasting void into int ptr:%c\n",*(char *)ptr);
+    //print value of variable by Dereferncing void pointer after typecasting void pointer to char pointer
+    ptr=&f;                 //assign address of float variable to void pointer
+    printf("Dereferncing void pointer by typecasting void into int ptr:%f\n",*(float *)ptr);
+    //print value of variable by Dereferncing void pointer after typecasting void pointer to float pointer
+    ptr=&d;                 //assign address of double variable to void pointer
+    printf("Dereferncing void pointer by typecasting void into int ptr:%lf\n",*(double *)ptr);
+    //print value of variable by Dereferncing void pointer after typecasting void pointer to double pointer
+    ptr=&ld;                //assign address of long double variable to void pointer
+    printf("Dereferncing void pointer by typecasting void into int ptr:%Lf\n",*(long double *)ptr);
+    //print value of variable by Dereferncing void pointer after typecasting void pointer to long double pointer
+    
+}

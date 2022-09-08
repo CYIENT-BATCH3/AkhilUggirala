@@ -1,0 +1,9 @@
+//WAP to type cast float to integer
+#include<stdio.h>           //include standard input and output header file using preprocessor directive
+int main()          //start main()
+{
+    int a=10,b;     //declare 2 variables
+    float c=25.33;  //declare float variables
+    b=(int)c;       //typecast float into int 
+    printf("%d",b); //print the typecasted value of b
+}
