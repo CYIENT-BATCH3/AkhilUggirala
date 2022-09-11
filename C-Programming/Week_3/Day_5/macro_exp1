@@ -1,0 +1,36 @@
+//WAP to calculate the arae of circle, cone and circular cylinder
+#include<stdio.h>               //include standard input and output header file using preprocessor directive
+#define PI 3.14                 //define a object macro PI  
+float aoc(int rad)              //define aoc()    area_of_circle=πrr
+{                                               
+    float area_circle;
+    area_circle=PI*(rad*rad);
+    return area_circle;
+}
+float ao_cone(int rad,int len)      //define ao_cone() formula_area=πr(r + l)
+{
+    float area_cone;
+    area_cone=PI*rad*(rad+len);
+    return area_cone;
+}
+float ao_cyl(int rad,int hei)       //define ao_cyl Formula_arae= 2πr (h + r)
+{
+    float area;
+    area= 2*PI*rad*(hei+rad);
+    return area;
+}
+int main()
+{
+    int r_circle,r_cone,l_cone,r_cyl,h_cyl;     //declare integer variables
+    float a_circle,a_cone,a_cylinder;
+    puts("Enter radius of circle:");
+    scanf("%d",&r_circle);                      //input radius of circle
+    puts("enter radius and length of the cone:");
+    scanf("%d %d",&r_cone,&l_cone);             //input radius and length of cone
+    puts("enter the radius and height of cylinder");
+    scanf("%d %d",&r_cyl,&h_cyl);               //input radius and height of cylinder
+    a_circle=aoc(r_circle);                     //call aoc()
+    a_cone=ao_cone(r_cone,l_cone);              //call ao_cone()
+    a_cylinder=ao_cyl(r_cyl,h_cyl);             //call ao_cyl
+    printf("Area of circle=%f Area of Cone:%f Area of cylinder:%f\n",a_circle,a_cone,a_cylinder);   //print the area of each 
+}
