@@ -1,0 +1,29 @@
+//WAP to implement typedef for structure
+#include<stdio.h>                   //include standard input and output header file using preprocessor directive
+struct student                      //declare a struct student with name[] and age as members 
+{
+	char name[10];
+	int age;
+};
+int main()                          //start main()
+{
+
+	typedef struct student t_s;     //using typedef given an alias name to struct student as t_s.
+	t_s s[5];                       //declare an array of structure s[] for struct variable.
+	int i,n;                        //declare i for referencing s[] and n for no.of students.
+	puts("enter no of students");
+	scanf("%d",&n);                 //input the value for n(no.of students)
+	for(i=0;i<n;i++)               //using for loop intialize the memebers of struct student.
+	{
+		puts("enter name:");
+		scanf("%s",s[i].name);     //input the student name
+		puts("enter age:");
+		scanf("%d",&s[i].age);     //input age of student
+	}
+	printf("Student Details:\n");
+	printf("----------------\n");
+	for(i=0;i<n;i++)                //define a for loop to print the student details.
+	{
+		printf("Student%d - Name:%s Age:%d\n",i,s[i].name,s[i].age);
+	}
+}
