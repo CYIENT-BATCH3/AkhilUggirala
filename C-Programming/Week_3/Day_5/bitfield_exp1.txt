@@ -1,0 +1,16 @@
+//WAP to program to define bit field with width of 1 bit
+#include<stdio.h>				//include standard input and output header file using preprocessor directive
+struct str {				//declare struct str and s1 variable of it.
+	int high;
+	int low;
+}s1;
+struct str1					//declare struct str1(bit-field) and s2 variable .
+{
+	int high :1;
+	int low :1;
+}s2;
+int main()
+{
+	printf("size of struct without bifields:%d size of struct with bitfields:%d\n",sizeof(s1),sizeof(s2));		//print the size of both the structures.
+}
+

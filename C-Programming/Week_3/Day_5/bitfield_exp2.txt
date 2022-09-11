@@ -1,0 +1,15 @@
+//WAP to input the value from 0 to 7 by using width of 3 bits
+#include<stdio.h>			//include standard input and output header file using preprocessor directive
+struct limit{				//define a struct with bitfield mechanism of width 3.
+	unsigned int var : 3;
+};
+int main()
+{
+	setbuf(stdout,NULL);
+	struct limit li;					//declare a variable for struct
+	li.var=7;							//assign value to member of struct
+	if(li.var>=0 && li.var<=7)			//used if condition to check whether the value is between 0 - 7.
+		printf("Value is %u size is %d\n",li.var,sizeof(li));	//print the size of struct variable
+	else
+		printf("invalid %u size is %d",li.var,sizeof(li));
+}

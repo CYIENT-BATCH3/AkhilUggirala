@@ -1,0 +1,14 @@
+//WAP to implement preprocessor directive
+#include<stdio.h>			//include standard input and output header file using preprocessor directive
+#define num 24				//define a macro num
+int main()					//start main()
+{
+#ifdef num					//if macro is defined print the below statement
+	printf("it is defined\n");
+#endif						
+#ifndef num					//if macro is not defined print the below statement
+	printf("Not defined");
+#elif num					//if the previous if condition fails then print the below statement.
+	printf("No, it is defined\n");
+#endif
+}

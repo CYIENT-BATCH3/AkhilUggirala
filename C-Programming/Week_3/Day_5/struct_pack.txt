@@ -1,0 +1,13 @@
+//WAP to overcome the structure padding using structure packing
+#include<stdio.h>			//include standard input and output header file using preprocessor directive
+#pragma pack(1)				//using pragma implement structure packing mechanism.
+struct pack					//declare struct with 3 members and s1 variable
+{
+	int i_var;
+	char c_var;
+	float f_var;
+}s1;
+int main()				//start main()
+{
+	printf("output:size of structure after packing is %d",sizeof(s1));		//print the size of structure
+}
