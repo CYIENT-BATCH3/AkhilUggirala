@@ -1,0 +1,11 @@
+//WAP to implement function macro and find the area of circle
+#include<stdio.h>       //include standard input and output header file using preprocessor directive
+#define PI 3.14         //define PI=3.14 using macro
+#define aoc(r) PI*r*r          //define a function type macro for area of circle
+int main()
+{
+    int r;      //declare a integer variable - r for radius of circle
+    puts("enter the radius");
+    scanf("%d",&r);     //input a radius of circle 
+    printf("Area of circle is %f",aoc(r));      //print the area of circle
+}

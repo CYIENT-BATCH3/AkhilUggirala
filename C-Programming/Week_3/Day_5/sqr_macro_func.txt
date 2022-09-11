@@ -1,0 +1,10 @@
+//WAP to implement function macro for square
+#include<stdio.h>           //include standard input and output header file using preprocessor directive
+#define SQR(x) x*x          //define a function type macro
+int main()
+{
+    int n;      //declare a integer variable
+    puts("enter a number to find its square:");
+    scanf("%d",&n);     //input a number 
+    printf("Square of given integer %d is %d",n,SQR(n));      //print the square
+}

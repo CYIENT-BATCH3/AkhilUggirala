@@ -1,0 +1,10 @@
+//WAP to implement function macro to perform multiplication between 2 variables
+#include<stdio.h>           //include standard input and output header file using preprocessor directive
+#define mul(x,y) x*y          //define a function type macro for multiplication
+int main()
+{
+    int n,n1;      //declare a integer variables
+    puts("enter the numbers");
+    scanf("%d%d",&n,&n1);     //input numbers 
+    printf("Multiplication of %d and %d is %d",n,n1,mul(n,n1));      //print the multiplicated value of n,n1
+}
