@@ -1,0 +1,17 @@
+//WAP to blink led
+#include <xc.h>		//include xc header file
+#include<stdio.h>	//include standard input and output header file using preprocessor directive
+#define _XTAL_FREQ 2000000	//define crystal frequency using preprocessor directive
+#define led RB0			//using #define, define pin:RB0 as led.
+void main()			//start main()
+{
+    TRISBbits.RB0=0;		//using TRIS register configure RBO pin as output.  
+    led=0;			//set status of led low intially. 
+    while(1)			//implement while() for continuous exectution.
+    {
+        led=1;			//set led high to glow
+        __delay_ms(1000);	//call delay() for 1000ms
+        led=0;			//put off led
+        __delay_ms(1000);	//call delay() for 1000ms
+    }
+}	//end main()
