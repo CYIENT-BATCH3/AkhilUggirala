@@ -1,0 +1,21 @@
+//WAP to blink led using switch
+#include <xc.h>             //include xc.h
+#define _XTAL_FREQ 20000000     //define the crystal frequency
+#define led RC0                 //define a pin RC0 as led
+void main()                     //start main()
+{
+    TRISBbits.RB0=1;            //configure RB0 as input for switch
+    TRISCbits.RC0=0;            //configure RC0 as output of led
+    RBPU=0;                     //enable pull up resistor by enabling RBPU pin of PORTB (INTCON2)
+    led=0;                      //keep led low at Initial 
+    while(1)                    //define while loop for infinite execution
+    {
+        if(PORTBbits.RB0==0)            //if condition to check if switch is pressed led must glow 
+        {
+            led=1;
+        }
+        else
+            led=0;                      //if switch is released led off.
+    }              
+}
+

@@ -1,0 +1,32 @@
+//WAP to blink two led's led1 for 5 times and led2 for 3 times.
+#include <xc.h>			//include xc.h
+#include<stdio.h>		//include standard input and output header file using preprocessor directive
+#define _XTAL_FREQ 20000000	//define crystal frequency
+#define led RB0			//define RB0 pin as LED
+#define led1 RB1		//define RB1 pin as LED1
+void main()			//start main()
+{
+    TRISBbits.RB0=0;		//configure RB0 as output
+    TRISBbits.RB1=0;		//configure RB1 as output
+    led=0;			//initially make led low
+    led1=0;			//initially make led1 low
+    while(1)			//while() for infinite execution
+    {
+        for(int i=0;i<5;i++)	//define a for loop to blink led for 5 times
+        {
+            led=1;
+        __delay_ms(500);
+        led=0;
+        __delay_ms(500);
+        }
+        
+        for(int i=0;i<3;i++)	//define for loop blink led1 for 3 times
+        {
+        led1=1;
+        __delay_ms(1000);
+        led1=0;
+        __delay_ms(1000);
+        }
+    }
+}
+
