@@ -1,0 +1,30 @@
+//WAP program to pass structure to a function.
+/*Algorithm:
+ 1.include stdio.h and string.h libraries using preprocessor directives
+ 2.define struct student with name and age as members
+ 3.define a function record with no return type and structure variable as argument
+ 4.Initialize  the members of struct, use strcpy() for initializing the array of characters.
+ 5.call the function in main() and print the details of student in function.
+ */
+
+
+#include<stdio.h>			//include standard input and output header file using preprocessor directive
+#include<string.h>			//include string header file using preprocessor directive
+struct student{				//declared a structure
+	char name[10];
+	int age;
+}s1;
+void record(struct student record)		//define a function with no return type and with struct student as argument
+{
+	printf("Name:%s\n",record.name);	//print the name of student
+	printf("age:%d \n",record.age);		//print the age of the student
+}
+int main()			//start main()
+{
+	setbuf(stdout,NULL);
+	puts("enter the name of the student");
+	scanf("%s",s1.name);					//input the student name in runtime
+	puts("enter age of student");
+	scanf("%d",&s1.age);					//input the age of student in runtime
+	record(s1);						//call record() with struct variable as argument to it.
+}			//end main()

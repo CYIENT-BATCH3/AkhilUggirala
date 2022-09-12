@@ -1,0 +1,21 @@
+//WAP to define and access the struct using pass by value mechanism
+#include<stdio.h>       //include standard input and output header file using preprocessor directive
+#include<string.h>      //include the string.h library
+struct student          //declare a structure data type
+{
+    int id;
+    char name[10];
+}s;
+struct student func(struct student s1)      //define a function with structure as argument and retrun type is struct
+{
+    s1.id=31;       //initialize the id of structure member using (.) operator
+    strcpy(s1.name,"king");         //using strcpy() input the name of student
+    return s1;          //return structure
+}
+int main()              //start main()
+{
+    struct student ptr;     //declare a structure variable to collect the returned structure from func()
+    ptr=func(s);        //call func() ad assign it's returned structure into ptr(structure variable)
+    printf("id:%d\n",ptr.id);           //print the id using (.) operator
+    printf("name:%s\n",ptr.name);       //print the name using (.) operator
+}

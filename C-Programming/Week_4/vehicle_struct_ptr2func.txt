@@ -1,0 +1,28 @@
+//WAP to pass by reference of struct variable to function.
+/*Algorithm:
+ 1.Include stdio.h library using preprocessor directive
+ 2.declare structure for vehicle with brand, model and quantity as it's members
+ 3.define a function car_details() with no return type and address of struct variable as argument
+ 4.In car_details() function input the members of the struct variable and print the members of the struct variable.*/
+#include<stdio.h>			//include standard input and output header file using preprocessor directive
+struct vehicle{				//declare a structure for a vehicle with brand, model and quantity as members of it.
+	char brand[10];
+	char model[10];
+	int quantity;
+}c_struc;
+void car_details(struct vehicle *);
+int main()				//start main()
+{
+	setbuf(stdout,NULL);
+	car_details(&c_struc);			//call car_details() with address of struct variable as argument
+}						//end main()
+void car_details(struct vehicle *detail)			//define a function to input and print the members of struct variable using pointer variable.
+{
+	puts("enter manufacturer name:");
+	scanf("%s",detail->brand);
+	puts("enter model number of car:");
+	scanf("%s",detail->model);
+	puts("enter no.of cars are available:");
+	scanf("%d",&detail->quantity);
+	printf("Car_name:%s	Model:%s	No.of cars available:%d\n",detail->brand,detail->model,detail->quantity);
+}

@@ -1,0 +1,23 @@
+//WAP to perform add, sub by passing values from a structure and return a structure
+#include<stdio.h>				//include standard input and output header file using preprocessor directive
+struct operation				//declare a structure operation with 2 members and struc as it's variable
+{
+	int x;
+	float y;
+}struc;
+void add(struct operation struc)			//define a function to add and print the sum of structure members
+{
+	printf("addition of %d + %f = %f",struc.x,struc.y,struc.x+struc.y);
+}
+void sub(struct operation struc)			//define a function to subtract and print the sum of structure members
+{
+	printf("addition of %d - %f = %f",struc.x,struc.y,struc.x-struc.y);
+}
+int main()							//start main()
+{
+	setbuf(stdout,NULL);
+	puts("enter the int and float values:\n");
+	scanf("%d %f",&struc.x,&struc.y);			//input the values for members of structure
+	add(struc);									//call add() with structure struc as argument
+	sub(struc);									//call add() with structure struc as argument
+}
