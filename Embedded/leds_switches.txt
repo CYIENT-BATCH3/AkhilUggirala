@@ -1,0 +1,52 @@
+//WAP to blink leds for fixed pattern, using 2 switches 2 patterns 
+#include <xc.h>
+#define _XTAL_FREQ 20000000	//define crystal frequency
+void main()			//start main()
+{
+    TRISBbits.RB0=1;		//configure RB0 as input		
+    TRISBbits.RB1=1;		//configure RB1 as input
+    TRISCbits.RC0=0;		//configure RC0 as output
+    TRISCbits.RC1=0;		//configure RC1 as output
+    PORTCbits.RC0=0;		//make led1 off initially
+    PORTCbits.RC1=0;		//make led2 off initially
+    RBPU=0;
+    while(1)			//while() for infinite execution
+    {
+        if(PORTBbits.RB0==0)		//if switch_1 is pressed blink led1 for 5 times and led2 for 3 times
+        {
+            for(int i=0;i<5;i++)	//define a for loop to blink led for 5 times
+            {
+                PORTCbits.RC0=1;
+                __delay_ms(1000);
+                PORTCbits.RC0=0;
+                __delay_ms(1000);
+            }
+        
+            for(int i=0;i<3;i++)	//define for loop blink led1 for 3 times
+            {
+                PORTCbits.RC1=1;
+                __delay_ms(1000);
+                PORTCbits.RC1=0;
+                __delay_ms(1000);
+            }
+        }
+         if(PORTBbits.RB1==0)		//if switch_2 is pressed blink led1 for 3 times and led2 for 5 times
+        {
+            for(int i=0;i<3;i++)	//define a for loop to blink led for 3 times
+            {
+                PORTCbits.RC0=1;
+                __delay_ms(1000);
+                PORTCbits.RC0=0;
+                __delay_ms(1000);
+            }
+        
+            for(int i=0;i<5;i++)	//define for loop blink led1 for 5 times
+            {
+                PORTCbits.RC1=1;
+                __delay_ms(1000);
+                PORTCbits.RC1=0;
+                __delay_ms(1000);
+            }
+        }
+    }
+}

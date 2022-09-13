@@ -1,0 +1,33 @@
+//WAP to blink led for multiple times using switch
+#include <xc.h>
+#define _XTAL_FREQ 20000000	//define crystal frequency
+void main()			//start main()
+{
+    TRISBbits.RB0=1;
+    TRISCbits.RC0=0;		//configure RB0 as output
+    TRISCbits.RC1=0;		//configure RB1 as output
+    PORTCbits.RC0=0;
+    PORTCbits.RC1=0;
+    RBPU=0;
+    while(1)			//while() for infinite execution
+    {
+        if(PORTBbits.RB0==0)	//if switch is pressed blink led's as described below
+        {
+            for(int i=0;i<5;i++)	//define a for loop to blink led for 5 times
+            {
+                PORTCbits.RC0=1;
+                __delay_ms(1000);
+                PORTCbits.RC0=0;
+                __delay_ms(1000);
+            }
+        
+            for(int i=0;i<3;i++)	//define for loop blink led1 for 3 times
+            {
+                PORTCbits.RC1=1;
+                __delay_ms(1000);
+                PORTCbits.RC1=0;
+                __delay_ms(1000);
+            }
+        }
+    }
+}
