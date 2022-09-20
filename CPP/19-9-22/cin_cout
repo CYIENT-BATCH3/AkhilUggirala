@@ -1,0 +1,10 @@
+//Write a C++ program to input a integer and print using cin and cout.
+#include<iostream>
+using namespace std;
+int main()
+{
+	int a;
+	cout<<"Enter the Value of a: ";
+	cin>>a;
+	cout<<"a="<<a;
+}
