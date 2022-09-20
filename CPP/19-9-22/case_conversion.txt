@@ -1,0 +1,44 @@
+//Write a C++ program to convert lower case to upper case and vice versa of a string.
+#include<iostream>
+#include<cstring>
+using namespace std;
+int main()
+{
+	char s[10],choice;
+	int str_len,i;
+	cout<<"enter string"<<endl;
+	cin>>s;
+	str_len=strlen(s);
+	cout<<"enter u to convert to upper || l to convert to lower:"<<endl;
+	cin>>choice;
+	switch(choice)
+	{
+	case 'u':
+	{
+		for(i=0;i<str_len;i++)
+			{
+			if(s[i]>=97&&s[i]<122)
+				{
+					s[i]=s[i]-32;
+				}
+			}
+		cout<<"Upper Case: "<<s<<endl;
+		break;
+	}
+	case 'l':
+	{
+		for(i=0;i<str_len;i++)
+		{
+			if(s[i]>=65&&s[i]<90)
+				{
+					s[i]=s[i]+32;
+				}
+		}
+				cout<<"Lower Case: "<<s<<endl;
+				break;
+	}
+	default:
+		cout<<"Invalid Attempt";
+	}
+
+}
